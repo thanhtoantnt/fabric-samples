@@ -73,9 +73,9 @@ class AssetTransfer extends Contract {
 
   async getBalance(ctx, id) {
     const assetString = await this.ReadAsset(ctx, id);
-    const asset = JSON.parse(assetString);
+    // const asset = JSON.parse(assetString);
     // const balance = asset.Balance;
-    return asset.toString();
+    return assetString;
   }
 
   async UpdateAccount(ctx, id, type, newValue) {
